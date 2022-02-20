@@ -1,0 +1,1 @@
+print(input("Stih: ")[int(input("Begin "))-1:int(input("End "))])

@@ -1,0 +1,1 @@
+print(input("Name: ").title()+input("Surname: ").title())
