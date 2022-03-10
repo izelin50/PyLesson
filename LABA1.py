@@ -32,6 +32,7 @@ def start(enter):
     else:
         print("Команда не найдена")
 
+
 def move_doc(n, m):
     try:
         directories[m].append(n)
