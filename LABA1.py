@@ -33,8 +33,11 @@ def start(enter):
         print("Команда не найдена")
 
 def move_doc(n, m):
-    directories[m].append(n)
-    directories[place_by_number(n)].remove(n)
+    try:
+        directories[m].append(n)
+        directories[place_by_number(n)].remove(n)
+    except:
+        return "Полки не существует"
     return 'Если существовала полка и документ, он перемещен на эту полку'
 
 
@@ -81,4 +84,7 @@ def get_all():
 
 
 while 1:
-    start(input("Введите название команды: "))
+    try:
+        start(input("Введите название команды: "))
+    except:
+        print("Что-то сломалось... Попробуйте ещё раз :)")
